@@ -41,7 +41,7 @@ class GeodesicLifting(PointCloud2GraphLifting):
             0,
         )
 
-        # Assemble hypergraph
+        # Assemble graph
         incidence_matrix = scipy.sparse.coo_matrix(
             (geodesics <= self.distance) * geodesics
         )

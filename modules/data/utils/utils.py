@@ -472,6 +472,7 @@ def load_gudhi_dataset(
         raise ValueError(f"Gudhi dataset {gudhi_dataset_name} not recognized.")
 
     pos = torch.tensor(points_data, dtype=torch.float)
+
     if feature_generator:
         x = feature_generator(pos)
         if x.shape[0] != pos.shape[0]:
